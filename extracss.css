@@ -18,8 +18,8 @@
 }
 
  
-.quoting-box.hide{
-	display:hidden;
+.quoting-box{
+	display:none;
 }
 .quoting-box.show {
 	display:block ;
