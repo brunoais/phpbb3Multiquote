@@ -1,0 +1,52 @@
+.mquote-icon, .mquote-icon a{ 
+	background-repeat: no-repeat;
+	background-position: left top !important;
+}
+.mquote-icon:hover, .mquote-icon a:hover{ 
+	background-position: left top !important;
+}
+.mquote-icon { 
+	background-image: url("icon_post_mquotev1.gif");
+	width: 20px; height: 20px;
+	
+	margin-left:-9px !important;
+	z-index:1;
+}
+
+.mquote-icon.quoted {
+	background-image: url("icon_post_mquotedv1.gif");
+}
+
+ 
+.quoting-box{
+	display:hidden;
+}
+.quoting-box.show {
+	display:block ;
+	
+	position:fixed ;
+	bottom: 30px;
+	right: 10px;
+	
+	width: 150px; height: 70px ;
+	
+	background-color: rgb(255,255,255);
+	
+	border:solid 1px rgb(0,0,0);
+}
+
+.quoting-box  > *{
+	display:inline-block;
+}
+
+.quoting-box  > .theX{
+	cursor:pointer;
+	
+	position: absolute;
+	top:0px;
+	right: 2px;
+}
+
+.quoting-box  > .option2{
+	display: block;
+}

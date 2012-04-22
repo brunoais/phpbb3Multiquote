@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>[RFC] Multiquote - Page 2 - Development Discussion Board</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Development Discussion Board" href="http://area51.phpbb.com/phpBB/feed.php" />
+	
+	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="http://area51.phpbb.com/phpBB/feed.php?mode=forums" />
+	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="http://area51.phpbb.com/phpBB/feed.php?mode=topics" />
+	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="http://area51.phpbb.com/phpBB/feed.php?mode=topics_active" />
+	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - [3.2/Arsia] RFCs &amp; Patches" href="http://area51.phpbb.com/phpBB/feed.php?f=108" />
+	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - [RFC] Multiquote" href="http://area51.phpbb.com/phpBB/feed.php?f=108&amp;t=42825" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Enter the page number you wish to go to:';
+	var on_page = '2';
+	var per_page = '10';
+	var base_url = './viewtopic.php?f=108&amp;t=42825';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '; path=/; domain=.phpbb.com';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="http://area51.phpbb.com/phpBB/styles/prosilver/template/forum_fn.js"></script>
+
+<link href="http://area51.phpbb.com/phpBB/styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="http://area51.phpbb.com/phpBB/styles/prosilver/theme/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://area51.phpbb.com/phpBB/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+
+<link href="http://area51.phpbb.com/header.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://area51.phpbb.com/analytics.js"></script>
+
+<!--[if lte IE 8]>
+	<link href="http://area51.phpbb.com/phpBB/styles/prosilver/theme/tweaks.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<![endif]-->
+
+
+<link href="./extracss.css" media="all" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="phpbb-header-bar">
+	<ul class="phpbb-menu">
+		<li class="phpbb-logo"><a href="http://area51.phpbb.com/"><img src="http://area51.phpbb.com/images/area51.png" alt="area51 @ phpBB" title="area51.phpbb.com" /></a></li>
+		<li><a href="http://area51.phpbb.com">Home</a></li>
+		<li><a href="http://tracker.phpbb.com/secure/Dashboard.jspa">Tracker</a></li>
+		<li><a href="http://wiki.phpbb.com/">Wiki</a></li>
+		<li><a href="http://bamboo.phpbb.com/">Builds</a></li>
+		<li><a href="http://area51.phpbb.com/projects/">Projects</a></li>
+		<li class="active"><a href="http://area51.phpbb.com/phpBB/">Discussion</a></li>
+	</ul>
+	<div id="exit-phpbb">
+		<a href="http://www.phpbb.com/"><img src="http://area51.phpbb.com/images/back_phpbb.png" alt="phpBB" title="www.phpbb.com" /></a>
+	</div>
+</div>
+<div id="phpbb-sub-header">
+<h1 style="float:left;margin-right:0px;margin-top:0px;">Development Discussion Board</h1>
+<div style="float:left;margin-left:30px;margin-top:4px;font-size:12px;">phpBB's testing ground of bleeding edge code</div>
+                
+			<div style="float:right;margin-left:10px;">
+				<a href="http://area51.phpbb.com/phpBB/search.php" title="View the advanced search options" style="font-size:12px;font-weight:normal;font-family:Verdana,Helvetica,Arial,sans-serif;">Advanced search</a>
+			</div>
+                        <div id="search-box" style="margin-top:2px;">
+                                <form action="http://area51.phpbb.com/phpBB/search.php" method="post" id="search">
+                                <fieldset>
+                                        <input name="keywords" id="keywords" type="text" maxlength="128" title="Search for keywords" class="inputbox search" value="Search…" onclick="if(this.value=='Search…')this.value='';" onblur="if(this.value=='')this.value='Search…';" />
+                                        <input class="button2" value="Search" type="submit" /> 
+                                </fieldset>
+                                </form>
+                        </div>
+                
+
+</div>
+<div id="wrap" style="clear:both;margin-top:20px;">
+	<a id="top" accesskey="t"></a>
+	<div id="page-header">
+<!--		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description" style="margin-left:20px;">
+				<!- - <a href="http://area51.phpbb.com/phpBB/index.php" title="Board index" id="logo"><span class="imageset site_logo"></span></a> - ->
+				<h1><a href="http://area51.phpbb.com/phpBB/index.php" style="color:#fff;text-decoration:none;" title="Board index">Development Discussion Board</a></h1>
+				<p>phpBB's testing ground of bleeding edge developmental code</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+		
+			<div id="search-box">
+				<form action="http://area51.phpbb.com/phpBB/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="text" maxlength="128" title="Search for keywords" class="inputbox search" value="Search…" onclick="if(this.value=='Search…')this.value='';" onblur="if(this.value=='')this.value='Search…';" />
+					<input class="button2" value="Search" type="submit" /><br />
+					<a href="http://area51.phpbb.com/phpBB/search.php" title="View the advanced search options">Advanced search</a> 
+				</fieldset>
+				</form>
+			</div>
+		
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+-->
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="http://area51.phpbb.com/phpBB/index.php" accesskey="h">Board index</a>  <strong>&#8249;</strong> <a href="http://area51.phpbb.com/phpBB/viewforum.php?f=102">phpBB &quot;Arsia&quot; 3.2 Development</a> <strong>&#8249;</strong> <a href="http://area51.phpbb.com/phpBB/viewforum.php?f=108">[3.2/Arsia] RFCs &amp; Patches</a></li>
+
+				<li class="rightside"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;t=42825" title="E-mail friend" class="sendemail">E-mail friend</a></li>
+				
+				<li class="rightside"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825&amp;start=10&amp;view=print" title="Print view" accesskey="p" class="print">Print view</a></li>				
+			</ul>
+
+			
+			<ul class="linklist leftside">
+				<li class="icon-ucp">
+					<a href="http://area51.phpbb.com/phpBB/ucp.php" title="User Control Panel" accesskey="e">User Control Panel</a>
+						 (<a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;folder=inbox"><strong>0</strong> new messages</a>)
+					 &bull;
+					<a href="http://area51.phpbb.com/phpBB/search.php?search_id=egosearch">View your posts</a>
+					
+					
+				</li>
+			</ul>
+			
+
+			<ul class="linklist rightside">
+				<li class="icon-faq"><a href="http://area51.phpbb.com/phpBB/faq.php" title="Frequently Asked Questions">FAQ</a></li>
+				
+					<li class="icon-members"><a href="http://area51.phpbb.com/phpBB/memberlist.php" title="View complete list of members">Members</a></li>
+					
+					<li class="icon-logout"><a href="http://area51.phpbb.com/phpBB/ucp.php?mode=logout&amp;sid=51ce2ea1e63650279707a55114a028c3" title="Logout [ brunoais ]" accesskey="x">Logout [ brunoais ]</a></li>
+				
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+	</div>
+
+	<a id="start_here"></a>
+	<div id="page-body">
+		
+
+<h2><a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825&amp;start=10">[RFC] Multiquote</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Publish your own request for comments or patches for Arsia. Discuss the contributions and proposals of others.<br /></div>
+
+
+
+<div class="topic-actions">
+
+	<div class="buttons">
+	
+		<div class="reply-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=reply&amp;f=108&amp;t=42825" title="Post a reply"><span></span>Post a reply</a></div>
+	
+	</div>
+
+	
+		<div class="search-box">
+			<form method="get" id="topic-search" action="http://area51.phpbb.com/phpBB/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="text" name="keywords" id="search_keywords" size="20" value="Search this topic…" onclick="if(this.value=='Search this topic…')this.value='';" onblur="if(this.value=='')this.value='Search this topic…';" />
+				<input class="button2" type="submit" value="Search" />
+				<input type="hidden" name="t" value="42825" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+
+	
+		<div class="pagination">
+			21 posts
+			 &bull; <a href="#" onclick="jumpto(); return false;" title="Click to jump to page…">Page <strong>2</strong> of <strong>3</strong></a> &bull; <span><a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825">1</a><span class="page-sep">, </span><strong>2</strong><span class="page-sep">, </span><a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825&amp;start=20">3</a></span>
+		</div>
+	
+
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="p237985" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=237985" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=237985" title="Reply with quote"><span>Reply with quote</span></a></li>
+					
+					<li class="mquote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=237985" title="multiquote"><span>multiquote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 class="first"><a href="#p237985">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=237985#p237985"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=108663">_hsr</a></strong> &raquo; Thu Apr 12, 2012 8:33 am </p>
+
+			
+
+			<div class="content">@callum, precisely my third option. Even if JS is disabled, users should be able to multiquote, and it is fairly simple, add &amp;quoteid=&lt;postid1&gt;|&lt;postid2&gt; to the url and it should do fine</div>
+
+			
+
+			
+			
+
+			
+			<div id="sig237985" class="signature"><span style="color: #ECF3F7">There is a text here !</span></div>
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile237985">
+			<dt>
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=108663">_hsr</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 35</dd>
+		<dd><strong>Joined:</strong> Mon Mar 26, 2012 7:06 am</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=237985" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=108663" title="E-mail _hsr"><span>E-mail _hsr</span></a></li>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p237987" class="post bg1 online">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=237987" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=237987" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p237987">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=237987#p237987"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=60057" style="color: #0099CC;" class="username-coloured">callumacrae</a></strong> &raquo; Thu Apr 12, 2012 8:51 am </p>
+
+			
+
+			<div class="content"><blockquote><div><cite>_hsr wrote:</cite>@callum, precisely my third option. Even if JS is disabled, users should be able to multiquote, and it is fairly simple, add &amp;quoteid=&lt;postid1&gt;|&lt;postid2&gt; to the url and it should do fine</div></blockquote><br />I don't think that it is worth the time it will take to develop.</div>
+
+			
+
+			
+			
+
+			
+			<div id="sig237987" class="signature"><span style="font-size: 85%; line-height: normal">&quot;In JavaScript, there is a beautiful, elegant, highly expressive language that is buried under a steaming pile of good intentions and blunders&quot;<br />—Douglas Crockford</span><br /><span style="font-weight: bold">View my MOD, <a href="http://phpbb-mobile.com/" class="postlink">phpBB Mobile</a></span></div>
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile237987">
+			<dt>
+				
+					<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=60057"><img src="http://area51.phpbb.com/phpBB/download/file.php?avatar=60057_1333194110.png" width="100" height="100" alt="User avatar" /></a><br />
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=60057" style="color: #0099CC;" class="username-coloured">callumacrae</a>
+			</dt>
+
+			<dd>Website Team<br /><img src="http://area51.phpbb.com/phpBB/images/ranks/web.png" alt="Website Team" title="Website Team" /></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 532</dd>
+		<dd><strong>Joined:</strong> Tue Apr 27, 2010 9:37 am</dd>
+		<dd><strong>Location:</strong> England</dd>
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=237987" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=60057" title="E-mail callumacrae"><span>E-mail callumacrae</span></a></li>
+					<li class="web-icon"><a href="http://lynxphp.com/" title="WWW: http://lynxphp.com/"><span>Website</span></a></li>
+					<li class="msnm-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=contact&amp;action=msnm&amp;u=60057" onclick="popup(this.href, 550, 320); return false;" title="WLM"><span>WLM</span></a></li>
+					
+					<li class="yahoo-icon"><a href="http://edit.yahoo.com/config/send_webmesg?.target=callumacrae&amp;.src=pg" onclick="popup(this.href, 780, 550); return false;" title="YIM"><span>YIM</span></a></li>
+					<li class="aim-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=contact&amp;action=aim&amp;u=60057" onclick="popup(this.href, 550, 320); return false;" title="AIM"><span>AIM</span></a></li>
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p237989" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=237989" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=237989" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p237989">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=237989#p237989"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=108663">_hsr</a></strong> &raquo; Thu Apr 12, 2012 9:19 am </p>
+
+			
+
+			<div class="content">hmm, in that case, the normal quote button should do the job, just that a new sprite would be needed in place of the existing quote button to make it something like &quot;quoted&quot;.<br />Quoting in quick reply will require fetching the bbcode, again possible by adjusting the quickedit's bbcode fetch method.</div>
+
+			
+
+			
+			
+
+			
+			<div id="sig237989" class="signature"><span style="color: #ECF3F7">There is a text here !</span></div>
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile237989">
+			<dt>
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=108663">_hsr</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 35</dd>
+		<dd><strong>Joined:</strong> Mon Mar 26, 2012 7:06 am</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=237989" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=108663" title="E-mail _hsr"><span>E-mail _hsr</span></a></li>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p237991" class="post bg1 online">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					<li class="edit-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=edit&amp;f=108&amp;p=237991" title="Edit post"><span>Edit post</span></a></li>
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=237991" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=237991" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p237991">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=237991#p237991"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=58131">brunoais</a></strong> &raquo; Thu Apr 12, 2012 9:50 am </p>
+
+			
+
+			<div class="content"><blockquote><div><cite>callumacrae wrote:</cite>I don't think it should support browsers with JavaScript disabled. Perhaps hide the button when js is disabled?</div></blockquote><br />Yeah. That sounds good. I also think that no JS, no quick reply.<br /><br /><blockquote><div><cite>_hsr wrote:</cite>hmm, in that case, the normal quote button should do the job, just that a new sprite would be needed in place of the existing quote button to make it something like &quot;quoted&quot;.<br />Quoting in quick reply will require fetching the bbcode, again possible by adjusting the quickedit's bbcode fetch method.</div></blockquote><br />I'm more into this:<br /><blockquote><div><cite>imkingdavid wrote:</cite>Let's keep the current quote button as is and implement this with a &quot;+&quot; icon or something.</div></blockquote></div>
+
+			
+
+			
+			
+
+			
+			
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile237991">
+			<dt>
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=58131">brunoais</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 299</dd>
+		<dd><strong>Joined:</strong> Fri Dec 18, 2009 3:55 pm</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=237991" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=58131" title="E-mail brunoais"><span>E-mail brunoais</span></a></li>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p238043" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=238043" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=238043" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p238043">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=238043#p238043"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=107061">galaxyAbstractor</a></strong> &raquo; Thu Apr 12, 2012 10:38 pm </p>
+
+			
+
+			<div class="content">+1<br /><br />I have really wanted a feature like this for a long time now as I regularly quote multiple posts in a single post. <a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=41685" class="postlink">I had actually made an RFC about this myself a while ago :&gt;</a></div>
+
+			
+
+			
+			
+
+			
+			
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile238043">
+			<dt>
+				
+					<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=107061"><img src="http://area51.phpbb.com/phpBB/download/file.php?avatar=107061_1332898720.png" width="89" height="120" alt="User avatar" /></a><br />
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=107061">galaxyAbstractor</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 7</dd>
+		<dd><strong>Joined:</strong> Sun Sep 25, 2011 7:40 pm</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=238043" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=107061" title="E-mail galaxyAbstractor"><span>E-mail galaxyAbstractor</span></a></li>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p238053" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=238053" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=238053" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p238053">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=238053#p238053"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=108663">_hsr</a></strong> &raquo; Fri Apr 13, 2012 3:07 am </p>
+
+			
+
+			<div class="content">hehe it seems we both have a lost brother here : <a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=81&amp;t=32748" class="postlink">viewtopic.php?f=81&amp;t=32748</a></div>
+
+			
+
+			
+			
+
+			
+			<div id="sig238053" class="signature"><span style="color: #ECF3F7">There is a text here !</span></div>
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile238053">
+			<dt>
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=108663">_hsr</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 35</dd>
+		<dd><strong>Joined:</strong> Mon Mar 26, 2012 7:06 am</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=238053" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=108663" title="E-mail _hsr"><span>E-mail _hsr</span></a></li>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p238077" class="post bg2 online">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					<li class="edit-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=edit&amp;f=108&amp;p=238077" title="Edit post"><span>Edit post</span></a></li>
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=238077" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=238077" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p238077">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=238077#p238077"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=58131">brunoais</a></strong> &raquo; Fri Apr 13, 2012 6:14 am </p>
+
+			
+
+			<div class="content">Man... Why ppl don't warn others about this and the discussions just get abandoned?<br />Can't we just merge all the info we have into this thread or somethin'?<br />I already closed the thread I started.</div>
+
+			
+
+			
+			
+
+			
+			
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile238077">
+			<dt>
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=58131">brunoais</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 299</dd>
+		<dd><strong>Joined:</strong> Fri Dec 18, 2009 3:55 pm</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=238077" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=58131" title="E-mail brunoais"><span>E-mail brunoais</span></a></li>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p238121" class="post bg1 online">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=238121" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=238121" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p238121">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=238121#p238121"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=60009">Meis2M</a></strong> &raquo; Fri Apr 13, 2012 2:48 pm </p>
+
+			
+
+			<div class="content">very well<br /> +1</div>
+
+			
+
+			
+			
+
+			
+			
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile238121">
+			<dt>
+				
+					<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=60009"><img src="http://area51.phpbb.com/phpBB/download/file.php?avatar=60009_1274811508.jpg" width="120" height="120" alt="User avatar" /></a><br />
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=60009">Meis2M</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 90</dd>
+		<dd><strong>Joined:</strong> Fri Apr 23, 2010 10:18 am</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=238121" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=60009" title="E-mail Meis2M"><span>E-mail Meis2M</span></a></li>
+					
+					
+					
+					<li class="yahoo-icon"><a href="http://edit.yahoo.com/config/send_webmesg?.target=meis2m&amp;.src=pg" onclick="popup(this.href, 780, 550); return false;" title="YIM"><span>YIM</span></a></li>
+					<li class="aim-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=contact&amp;action=aim&amp;u=60009" onclick="popup(this.href, 550, 320); return false;" title="AIM"><span>AIM</span></a></li>
+					<li class="jabber-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=contact&amp;action=jabber&amp;u=60009" onclick="popup(this.href, 550, 320); return false;" title="Jabber"><span>Jabber</span></a></li>
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p238211" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=238211" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=238211" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p238211">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=238211#p238211"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=108663">_hsr</a></strong> &raquo; Sun Apr 15, 2012 3:15 am </p>
+
+			
+
+			<div class="content">Mods, please merge the following threads to this one,<br /><!-- l --><a class="postlink-local" href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=41685">viewtopic.php?f=108&amp;t=41685</a><!-- l --><br /><!-- l --><a class="postlink-local" href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42521">viewtopic.php?f=108&amp;t=42521</a><!-- l --></div>
+
+			
+
+			
+			
+
+			
+			<div id="sig238211" class="signature"><span style="color: #ECF3F7">There is a text here !</span></div>
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile238211">
+			<dt>
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=108663">_hsr</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 35</dd>
+		<dd><strong>Joined:</strong> Mon Mar 26, 2012 7:06 am</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=238211" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=108663" title="E-mail _hsr"><span>E-mail _hsr</span></a></li>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	
+	<div id="p238339" class="post bg1 online">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+		
+			
+				<ul class="profile-icons">
+					<li class="edit-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=edit&amp;f=108&amp;p=238339" title="Edit post"><span>Edit post</span></a></li>
+					
+					<li class="report-icon"><a href="http://area51.phpbb.com/phpBB/report.php?f=108&amp;p=238339" title="Report this post"><span>Report this post</span></a></li>
+					
+					
+					<li class="quote-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=quote&amp;f=108&amp;p=238339" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+		
+
+			<h3 ><a href="#p238339">Re: [RFC] Multiquote</a></h3>
+			<p class="author"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?p=238339#p238339"><span class="imageset icon_post_target">Post</span></a>by <strong><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=58131">brunoais</a></strong> &raquo; Tue Apr 17, 2012 2:32 pm </p>
+
+			
+
+			<div class="content">Is this ready for some non-working experience tests?<br />If it is, I can make one to show how the system could look like in a couple hours.<br />For now, I'd like to pickup the ideas and try 'em to check what's best.</div>
+
+			
+
+			
+			
+
+			
+			
+		
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile238339">
+			<dt>
+				
+				<a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=58131">brunoais</a>
+			</dt>
+
+			<dd>Registered User</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 299</dd>
+		<dd><strong>Joined:</strong> Fri Dec 18, 2009 3:55 pm</dd>
+		
+
+		
+
+		
+
+		
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="pm-icon"><a href="http://area51.phpbb.com/phpBB/ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=238339" title="Private message"><span>Private message</span></a></li>
+					<li class="email-icon"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=email&amp;u=58131" title="E-mail brunoais"><span>E-mail brunoais</span></a></li>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</dd>
+		
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<form method="post" action="http://area51.phpbb.com/phpBB/posting.php?mode=reply&amp;f=108&amp;t=42825" id="qr_postform">
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+				<h2>Quick Reply</h2>
+				<fieldset class="fields1">
+					<dl style="clear: left;">
+						<dt><label for="subject">Subject:</label></dt>
+						<dd><input type="text" name="subject" id="subject" size="45" maxlength="64" tabindex="2" value="Re: [RFC] Multiquote" class="inputbox autowidth" /></dd>
+					</dl>
+				<div id="message-box">
+					<textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="inputbox"></textarea>
+				</div>
+				</fieldset>
+				<fieldset class="submit-buttons">
+					<input type="hidden" name="creation_time" value="1335000964" />
+<input type="hidden" name="form_token" value="4fef61db1ec27fbafc58b64cb603a0c15b366f56" />
+
+					<input type="hidden" name="topic_cur_post_id" value="238441" />
+<input type="hidden" name="lastclick" value="1335000964" />
+<input type="hidden" name="topic_id" value="42825" />
+<input type="hidden" name="forum_id" value="108" />
+<input type="hidden" name="attach_sig" value="1" />
+<input type="hidden" name="notify" value="1" />
+
+					<input type="submit" accesskey="f" tabindex="6" name="preview" value="Full Editor &amp; Preview" class="button2" data-ajax="false" id="qr_full_editor" />&nbsp;
+					<input type="submit" accesskey="s" tabindex="7" name="post" value="Submit" class="button1" />&nbsp;
+				</fieldset>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+</form>
+
+	<form id="viewtopic" method="post" action="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825&amp;start=10">
+
+	<fieldset class="display-options" style="margin-top: 0; ">
+		<a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825&amp;start=0" class="left-box left">Previous</a>
+		<a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825&amp;start=20" class="right-box right">Next</a>
+		
+		<label>Display posts from previous: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+		<label>Sort by <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label> <label><select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select> <input type="submit" name="sort" value="Go" class="button2" /></label>
+		
+	</fieldset>
+
+	</form>
+	<hr />
+
+<div class="topic-actions">
+	<div class="buttons">
+	
+		<div class="reply-icon"><a href="http://area51.phpbb.com/phpBB/posting.php?mode=reply&amp;f=108&amp;t=42825" title="Post a reply"><span></span>Post a reply</a></div>
+	
+	</div>
+
+	
+		<div class="pagination">
+			21 posts
+			 &bull; <a href="#" onclick="jumpto(); return false;" title="Click to jump to page…">Page <strong>2</strong> of <strong>3</strong></a> &bull; <span><a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825">1</a><span class="page-sep">, </span><strong>2</strong><span class="page-sep">, </span><a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825&amp;start=20">3</a></span>
+		</div>
+	
+</div>
+
+	<p></p><p><a href="http://area51.phpbb.com/phpBB/viewforum.php?f=108" class="left-box left" accesskey="r">Return to [3.2/Arsia] RFCs &amp; Patches</a></p>
+
+	<form method="post" id="jumpbox" action="http://area51.phpbb.com/phpBB/viewforum.php" onsubmit="if(this.f.value == -1){return false;}">
+
+	
+		<fieldset class="jumpbox">
+	
+			<label for="f" accesskey="j">Jump to:</label>
+			<select name="f" id="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+			
+				
+				<option value="-1">Select a forum</option>
+			
+				<option value="-1">------------------</option>
+				<option value="12">www.phpbb.com/community/</option>
+			
+				
+				<option value="99">General Development Discussion</option>
+			
+				
+				<option value="90">phpBB &quot;Ascraeus&quot; 3.1 Development</option>
+			
+				
+				<option value="81">&nbsp; &nbsp;[3.1/Ascraeus] Discussion</option>
+			
+				
+				<option value="84">&nbsp; &nbsp;[3.1/Ascraeus] RFCs &amp; Patches</option>
+			
+				
+				<option value="111">&nbsp; &nbsp;&nbsp; &nbsp;[3.1/Ascraeus] Event Requests</option>
+			
+				
+				<option value="102">phpBB &quot;Arsia&quot; 3.2 Development</option>
+			
+				
+				<option value="105">&nbsp; &nbsp;[3.2/Arsia] Discussion</option>
+			
+				
+				<option value="108" selected="selected">&nbsp; &nbsp;[3.2/Arsia] RFCs &amp; Patches</option>
+			
+				
+				<option value="96">phpBB &quot;Rhea&quot; 4.0 Development</option>
+			
+				
+				<option value="75">&nbsp; &nbsp;[4.0/Rhea] Discussion</option>
+			
+				
+				<option value="78">&nbsp; &nbsp;[4.0/Rhea] RFCs &amp; Patches</option>
+			
+				
+				<option value="87">phpBB &quot;Olympus&quot; 3.0 Development</option>
+			
+				
+				<option value="3">&nbsp; &nbsp;[3.0/Olympus] Discussion</option>
+			
+				
+				<option value="4">&nbsp; &nbsp;[3.0/Olympus] New features discussion</option>
+			
+				
+				<option value="26">&nbsp; &nbsp;[3.0/Olympus] Styling</option>
+			
+				
+				<option value="5">Everything Else</option>
+			
+				
+				<option value="6">&nbsp; &nbsp;Chit Chat</option>
+			
+				
+				<option value="7">&nbsp; &nbsp;Testing subforum</option>
+			
+				
+				<option value="8">&nbsp; &nbsp;&nbsp; &nbsp;Subforum</option>
+			
+				
+				<option value="9">&nbsp; &nbsp;&nbsp; &nbsp;A &quot;category&quot; subforum in the Testing subforum</option>
+			
+				
+				<option value="10">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;A sub-sub-forum</option>
+			
+				
+				<option value="13">&nbsp; &nbsp;Passworded Forum</option>
+			
+				
+				<option value="2">&nbsp; &nbsp;Archive of phpBB related forums</option>
+			
+				
+				<option value="71">&nbsp; &nbsp;&nbsp; &nbsp;phpBB 3.0.x Support</option>
+			
+				
+				<option value="72">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;phpBB 3.0.x MOD/Style Support</option>
+			
+				
+				<option value="15">&nbsp; &nbsp;&nbsp; &nbsp;EasyMOD for 2.0.x</option>
+			
+				
+				<option value="56">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Download EasyMOD</option>
+			
+				
+				<option value="17">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Announcements and News</option>
+			
+				
+				<option value="24">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;General EM Discussion</option>
+			
+				
+				<option value="19">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Installing EasyMOD</option>
+			
+				
+				<option value="21">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Installing MODs with EasyMOD</option>
+			
+				
+				<option value="43">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;SQL Parser</option>
+			
+				
+				<option value="25">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;EMC Discussion</option>
+			
+				
+				<option value="54">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Bug Tracker</option>
+			
+				
+				<option value="55">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Feature Requests</option>
+			
+				
+				<option value="35">&nbsp; &nbsp;&nbsp; &nbsp;phpBB 2.0.x &amp; 3.0.x support</option>
+			
+				
+				<option value="40">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Mod support</option>
+			
+			</select>
+			<input type="submit" value="Go" class="button2" />
+		</fieldset>
+	</form>
+
+
+
+	<h3><a href="http://area51.phpbb.com/phpBB/viewonline.php">Who is online</a></h3>
+	<p>Users browsing this forum: <a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=58131">brunoais</a>, <a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=viewprofile&amp;u=60009">Meis2M</a> and 7 guests</p>
+
+	</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="http://area51.phpbb.com/phpBB/index.php" accesskey="h">Board index</a></li>
+				
+					
+					<li class="icon-unsubscribe"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?uid=58131&amp;f=108&amp;t=42825&amp;unwatch=topic&amp;start=10&amp;hash=0a4043f7" title="Unsubscribe topic" data-ajax="alt_text" data-alt-text="Subscribe topic">Unsubscribe topic</a></li>
+					<li class="icon-bookmark"><a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=108&amp;t=42825&amp;start=10&amp;bookmark=1&amp;hash=0a4043f7" title="Bookmark topic" data-ajax="alt_text" data-alt-text="Remove from bookmarks">Bookmark topic</a></li>
+					
+				
+			<li class="rightside"><a href="http://area51.phpbb.com/phpBB/memberlist.php?mode=leaders">The team</a> &bull; <a href="http://area51.phpbb.com/phpBB/ucp.php?mode=delete_cookies" data-ajax="true" data-refresh="true">Delete all board cookies</a> &bull; All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+		
+		
+	</div>
+
+	<div id="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request.">
+		<div id="darken">&nbsp;</div>
+		<div class="jalert" id="loadingalert"><h3>Loading</h3><p>Please wait.</p></div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close"></a>
+		<h3 class="alert_title"></h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close"></a>
+		<p class="alert_text"></p>
+		<input type="button" class="button1" value="Yes" />&nbsp;
+		<input type="button" class="button2" value="No" />
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" accesskey="z"></a>
+	
+</div>
+
+<div id="quotingBox" class="quoting-box">
+	<div class="theX">X</div>
+	<div class="msg">%d quoted messages</div>
+	<div class="option1" title="this should be a visible button">Reply them</div>
+	<div class="option2" title="just a small text, still visible though">Start Over</div>
+</div>
+
+<script type="text/javascript" src="http://area51.phpbb.com/phpBB/assets/javascript/jquery.js"></script>
+
+<script type="text/javascript" src="http://area51.phpbb.com/phpBB/assets/javascript/core.js"></script>
+<script src="http://area51.phpbb.com/phpBB/styles/prosilver/template/ajax.js"></script>
+
+<script>
+	var quotingBox = $(document.getElementById('quotingBox'))
+	var noQuoted = 0;
+	
+	$(".mquote-icon").click(
+		function(e){
+			$(this).toggleClass("quoted");
+			if(/( |^)quoted( |$)/.test(this.className)){
+				noQuoted++;
+			}else{
+				noQuoted--;
+			}
+			if(noQuoted > 0){
+				quotingBox.addClass("show");
+			}else{
+				quotingBox.removeClass("show");
+			}
+			e.preventDefault();
+		}
+	);
+	var textarea = $(document.getElementById('message-box')).find("textarea") //.click(function (){alert("that's it")});
+	
+	quotingBox.find(".theX").click(
+			function (){
+				quotingBox.removeClass("show");
+			}
+		);
+	
+	quotingBox.find(".option1").click(
+			function (){
+				textarea[0].value = "This is some dummy text you quoted";
+				textarea[0].focus();
+			}
+		);
+	quotingBox.find(".option2").click(
+			function (){
+			
+			}
+		);
+</script>
+
+</body>
+</html>
